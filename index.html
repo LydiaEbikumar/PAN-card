@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="jquery/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <form id="panForm">
+        PAN Card <input type="text" id="panInput" placeholder="Enter your PAN NUMBER"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+    $(document).ready(function() {
+        var panPattern = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+        function isValidPan(pan) {
+            return panPattern.test(pan);
+        }
+        $('#panForm').submit(function(event) {
+            event.preventDefault(); 
+            var pan = $('#panInput').val();
+            if (isValidPan(pan)) {
+                alert('Successfully submitted'); 
+            } else {
+                alert('Invalid PAN NUMBER');
+            }
+        });
+    });
+    
+    
+</script>
+        
+    
+</body>
+</html>

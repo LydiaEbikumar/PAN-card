@@ -1,0 +1,16 @@
+form{
+    margin-left: 40%;
+    margin-top: 10%;
+    background-color: rgb(133, 203, 231);
+    margin-right: 40%;
+    padding: 10px;
+    font-weight: 600;
+}
+button{
+    margin-left: 90px;
+    font-weight: 400;
+}
+#panInput{
+    width: 200px;
+    height: 30px;
+}
